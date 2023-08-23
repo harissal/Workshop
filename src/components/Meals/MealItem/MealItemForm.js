@@ -12,7 +12,7 @@ const MealItemForm = (props) => {
     const enteredAmountNumber = +enteredAmount;
 
     if (
-      enteredAmount.trum().length === 0 ||
+      enteredAmount.trim().length === 0 ||
       enteredAmountNumber < 1 ||
       enteredAmountNumber > 5
     ) {
@@ -20,11 +20,11 @@ const MealItemForm = (props) => {
       return;
     }
 
-    props.onAddToCar(enteredAmountNumber);
+    props.onAddToCart(enteredAmountNumber);
   };
 
   return (
-    <form className={classes.form}>
+    <form className={classes.form} onSubmit={submitHandler}>
       <Input
         ref={amountInputRef}
         label="Amount"

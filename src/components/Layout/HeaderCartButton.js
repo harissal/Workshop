@@ -10,7 +10,7 @@ const HeaderCartButton = (props) => {
 
   const { items } = cartCtx;
 
-  const numberOfCartItems = items.reduce((curNumber, item) => {
+  const numberOfCartItems = cartCtx.items.reduce((curNumber, item) => {
     return curNumber + item.amount;
   }, 0);
 
