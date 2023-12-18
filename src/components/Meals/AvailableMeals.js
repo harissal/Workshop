@@ -19,7 +19,7 @@ const AvailableMeals = () => {
       }
 
       const responseData = await response.json();
-      console.log(responseData); // null, meaning fetch is not successful
+      console.log(responseData);
 
       const loadedMeals = [];
 
